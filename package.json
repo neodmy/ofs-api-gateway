@@ -1,0 +1,36 @@
+{
+  "name": "ofs-api-gateway",
+  "version": "1.0.0",
+  "description": "APi Gateway for OFS",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "start:rabbit": "docker-compose -f docker/docker-compose.rabbit.yml up -d",
+    "stop:rabbit": "docker-compose -f docker/docker-compose.rabbit.yml down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neodmy/ofs-api-gateway.git"
+  },
+  "author": "David Miguel Yusta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neodmy/ofs-api-gateway/issues"
+  },
+  "homepage": "https://github.com/neodmy/ofs-api-gateway#readme",
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
